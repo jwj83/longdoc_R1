@@ -1,0 +1,12 @@
+export BASE_URL="https://api.siliconflow.cn/v1"
+export API_KEY="sk-titqsuupvhcgoocdryocnqjfyubanizvskmpdedniidawwnp"
+#export MODEL_NAME="Qwen/Qwen2.5-72B-Instruct"
+export DECISION_MODEL_NAME="Qwen/Qwen3-8B"
+export READ_MODEL_NAME="Qwen/Qwen2.5-72B-Instruct"
+export ANSWER_MODEL_NAME="Qwen/Qwen2.5-32B-Instruct"
+python ./experiments/run_experiment.py \
+  --train_samples 3 \
+  --validation_samples 3 \
+  --eval_split validation \
+  --top_k 5 \
+  --max_steps 8
