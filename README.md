@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Long Document Hierarchical Tool-Use Agent (MVP)
 
 This repository is a **research-oriented prototype** for comparing:
@@ -139,3 +140,6 @@ Main outputs are saved to:
 - Add tool budgets / cost-aware planning.
 - Add trajectory quality metrics (tool efficiency, depth usage).
 - Add async batching and caching for embeddings.
+=======
+# longdoc_R1
+>>>>>>> 7f5ed4c2a156e2a911276fb3359b75264095ca6d
