@@ -1,9 +1,0 @@
-{
-  "input": "outputs/train_COT/train_sft_v2_clue2_184_plus_clue3_30_soft_clean.jsonl",
-  "output_dir": "outputs/rl_data/longdoc_grpo_20_smoke",
-  "total": 20,
-  "train": 16,
-  "test": 4,
-  "clue_level": 2,
-  "overview_max_summary_chars": 0
-}
