@@ -1,0 +1,58 @@
+{
+  "raw_total": 54,
+  "accepted": 20,
+  "rejected": 34,
+  "soft_clean": 12,
+  "strict_clean": 6,
+  "accepted_rate_raw": 0.37037037037037035,
+  "soft_clean_rate_raw": 0.2222222222222222,
+  "strict_clean_rate_raw": 0.1111111111111111,
+  "soft_clean_rate_accepted": 0.6,
+  "strict_clean_rate_accepted": 0.3,
+  "semantic_ok_rate_accepted": 1.0,
+  "replay_ok_rate_accepted": 1.0,
+  "qa_after_read_rate_accepted": 1.0,
+  "qa_unknown_rate_accepted": 0.4,
+  "evidence_hit_rate_accepted": 0.75,
+  "qa_gold_support_rate_accepted": 0.3,
+  "soft_evidence_ok_rate_accepted": 0.8,
+  "strict_keep_rate_accepted": 0.3,
+  "soft_keep_rate_accepted": 0.6,
+  "avg_read_steps_accepted": 2.7,
+  "avg_qa_success_count_accepted": 1.0,
+  "avg_invalid_action_count_accepted": 0.45,
+  "avg_invalid_final_no_qa_count_accepted": 0.2,
+  "avg_total_steps_accepted": 7.35,
+  "rejected_breakdown_heuristic": {
+    "qa_then_semantic_wrong_or_rejected": 19,
+    "has_invalid_or_parse_marker": 19,
+    "api_error": 15
+  },
+  "rejected_examples": [
+    [
+      "validation_3",
+      "read=16, qa=10, answer=13",
+      "WHAT DOES A DRINK FROM NARCISSUS'S SPRING CAUSE THE DRINKER TO DO?"
+    ],
+    [
+      "validation_5",
+      "read=10, qa=12, answer=17",
+      "WHAT DID THE  SYMBOLIC VICES DISGUISE THEMSELVES TO BE?"
+    ],
+    [
+      "validation_6",
+      "read=12, qa=4, answer=18",
+      "WHAT SENTENCE DID CYNTHIA GIVE TO THE SYMBOLIC VICES?"
+    ],
+    [
+      "validation_8",
+      "read=6, qa=14, answer=17",
+      "HOW MANY PHASES DID THE COURT COMPLIMENT COMPETITION HAVE?"
+    ],
+    [
+      "validation_13",
+      "read=12, qa=12, answer=18",
+      "Where is Narcissus's spring?"
+    ]
+  ]
+}

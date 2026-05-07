@@ -1,0 +1,17 @@
+{
+  "raw_generated": 4,
+  "strict_clean": 0,
+  "soft_clean": 3,
+  "strict_keep_rate": 0.0,
+  "soft_keep_rate": 0.75,
+  "semantic_ok_rate": 1.0,
+  "replay_ok_rate": 1.0,
+  "invalid_action_rate": 0.75,
+  "invalid_final_rate": 0.75,
+  "qa_unknown_rate": 0.25,
+  "evidence_hit_rate": 0.5,
+  "qa_gold_support_rate": 0.5,
+  "soft_evidence_ok_rate": 0.75,
+  "avg_read_steps": 4.5,
+  "avg_total_steps": 9.25
+}

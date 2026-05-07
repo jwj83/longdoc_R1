@@ -1,0 +1,3 @@
+id,semantic_ok,replay_ok,read_steps,qa_success_count,invalid_action_count,invalid_final_no_qa_count,qa_after_read,qa_unknown,last_qa_node_id,target_leaf_node_id,evidence_hit,qa_gold_support,soft_evidence_ok,total_steps,strict_keep,soft_keep
+validation_2,True,True,5,1,0,0,True,False,validation_2_l1_1_l2_1_l3_2,validation_2_l1_1_l2_1_l3_0,False,False,False,9,False,False
+validation_4,True,True,3,1,1,1,True,False,validation_4_l1_1_l2_0_l3_5,validation_4_l1_1_l2_0_l3_5,True,False,True,9,False,True

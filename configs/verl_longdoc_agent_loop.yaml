@@ -1,0 +1,2 @@
+- name: longdoc_xml_agent
+  _target_: rl.longdoc_verl_agent_loop.LongDocXMLAgentLoop

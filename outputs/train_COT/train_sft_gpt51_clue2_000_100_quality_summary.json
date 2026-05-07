@@ -1,0 +1,17 @@
+{
+  "raw_generated": 41,
+  "strict_clean": 12,
+  "soft_clean": 24,
+  "strict_keep_rate": 0.2926829268292683,
+  "soft_keep_rate": 0.5853658536585366,
+  "semantic_ok_rate": 1.0,
+  "replay_ok_rate": 1.0,
+  "invalid_action_rate": 0.24390243902439024,
+  "invalid_final_rate": 0.2926829268292683,
+  "qa_unknown_rate": 0.24390243902439024,
+  "evidence_hit_rate": 0.5365853658536586,
+  "qa_gold_support_rate": 0.34146341463414637,
+  "soft_evidence_ok_rate": 0.6341463414634146,
+  "avg_read_steps": 2.8780487804878048,
+  "avg_total_steps": 7.634146341463414
+}

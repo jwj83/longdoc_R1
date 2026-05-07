@@ -1,0 +1,10 @@
+id,semantic_ok,replay_ok,read_steps,qa_success_count,invalid_action_count,invalid_final_no_qa_count,qa_after_read,qa_unknown,last_qa_node_id,target_leaf_node_id,evidence_hit,qa_gold_support,soft_evidence_ok,total_steps,strict_keep,soft_keep
+validation_4,True,True,2,1,1,1,True,False,validation_4_l1_1_l2_0_l3_5,validation_4_l1_1_l2_0_l3_5,True,False,True,7,False,True
+validation_6,True,True,2,1,0,1,True,True,validation_6_l1_4_l2_0_l3_3,validation_6_l1_4_l2_0_l3_3,True,False,True,6,False,False
+validation_28,True,True,3,1,2,0,True,False,validation_28_l1_1_l2_1_l3_0,validation_28_l1_1_l2_1_l3_0,True,True,True,8,False,True
+validation_84,True,True,3,1,0,1,True,False,validation_84_l1_2_l2_0_l3_1,validation_84_l1_2_l2_0_l3_0,False,True,True,7,False,True
+validation_88,True,True,4,1,1,1,True,False,validation_88_l1_0_l2_2_l3_0,validation_88_l1_0_l2_1_l3_4,False,True,True,9,False,True
+validation_145,True,True,3,1,1,1,True,True,validation_145_l1_1_l2_0_l3_0,validation_145_l1_1_l2_0_l3_3,False,False,False,8,False,False
+validation_153,True,True,5,1,0,1,True,False,validation_153_l1_5_l2_0_l3_3,validation_153_l1_5_l2_0_l3_3,True,True,True,9,False,True
+validation_167,True,True,4,1,0,1,True,False,validation_167_l1_1_l2_0_l3_1,validation_167_l1_0_l2_0_l3_2,False,False,False,8,False,False
+validation_179,True,True,4,1,1,0,True,True,validation_179_l1_0_l2_0_l3_3,validation_179_l1_0_l2_0_l3_2,False,False,False,8,False,False

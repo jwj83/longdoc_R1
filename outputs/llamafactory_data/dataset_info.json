@@ -1,0 +1,10 @@
+{
+  "longdoc_r1_sft_v2_214": {
+    "file_name": "longdoc_r1_sft_v2_214_singlestep_sharegpt.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    }
+  }
+}

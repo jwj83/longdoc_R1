@@ -66,7 +66,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--top_k", type=int, default=5)
     parser.add_argument("--max_steps", type=int, default=12)
     parser.add_argument("--embedding_model", type=str, default="sentence-transformers/all-MiniLM-L6-v2")
-    parser.add_argument("--decision_model", type=str, default="Qwen/Qwen3-8B")
+    parser.add_argument("--decision_model", type=str, default="ChurchillQAQ/LongVideo-R1-Qwen3")
     parser.add_argument("--read_model", type=str, default="Qwen/Qwen2.5-72B-Instruct")
     parser.add_argument("--qa_model", type=str, default="Qwen/Qwen2.5-32B-Instruct")
     parser.add_argument("--output_dir", type=str, default=str(PROJECT_ROOT / "outputs"))

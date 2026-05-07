@@ -1,0 +1,40 @@
+### model
+model_name_or_path: /home/jiangwenjun25/cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+lora_rank: 16
+lora_alpha: 32
+lora_dropout: 0.05
+
+### dataset
+dataset_dir: /home/jiangwenjun25/Longdoc_R1/outputs/llamafactory_data
+dataset: longdoc_r1_sft_184_terminalqa_notrunc_singlestep
+template: qwen3
+cutoff_len: 8192
+max_samples: 828
+overwrite_cache: true
+preprocessing_num_workers: 8
+
+### output
+output_dir: /home/jiangwenjun25/Longdoc_R1/outputs/checkpoints/longdoc_r1_qwen3_8b_lora_sft_184
+logging_steps: 1
+save_steps: 20
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: none
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+bf16: true
+ddp_timeout: 180000000

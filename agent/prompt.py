@@ -2,15 +2,15 @@
 
 from __future__ import annotations
 
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
 SYSTEM_PROMPT = """[BEGIN OF GOAL]
 You are a reasoning assistant designed to answer questions about a long document through hierarchical node descriptions. The document is organized into four levels of granularity:
 1. Root-level: The entire document.
-2. High-level: The document is divided into width major segments.
-3. Medium-level: Each High-level segment is further divided into width sub-segments.
-4. Low-level: Each Medium-level segment is further divided into width finer sub-segments.
+2. High-level: The document is divided into major segments.
+3. Medium-level: Each High-level segment is further divided into sub-segments.
+4. Low-level: Each Medium-level segment is further divided into finer sub-segments.
 You will be asked a question about the document.
 At the beginning, you are given only the High-level descriptions.
 You are NOT allowed to answer using general knowledge.
@@ -32,7 +32,7 @@ Directly provide your final answer inside <answer></answer> tags.
 Identify which part(s) of the document might contain the needed information. Then use one of the following tools:
 - To obtain finer descriptions:
 <tool>read((high segment id, medium segment id, low segment id))</tool>
-- Each of the three IDs is an integer from 1 to width.
+- IDs are 1-based integers. Use the document tree shape given in the user message to stay within valid ranges.
 - To request a Medium-level description, provide (high segment id, medium segment id) only.
 - To request a Low-level description, provide the full triplet (high segment id, medium segment id, low segment id).
 
@@ -58,11 +58,17 @@ or
 [END OF FORMAT INSTRUCTIONS]"""
 
 
-def build_initial_messages(question: str, root_id: str) -> List[Dict[str, str]]:
+def build_initial_messages(
+    question: str,
+    root_id: str,
+    tree_shape_info: Optional[str] = None,
+) -> List[Dict[str, str]]:
     """Build initial messages for ReAct loop."""
+    shape_text = f"\nDocument Tree Shape:\n{tree_shape_info}\n" if tree_shape_info else ""
     user_prompt = (
       f"Question: {question}\n"
       f"Root Node ID: {root_id}\n"
+      f"{shape_text}"
       "Use <tool>read(...)</tool> / <tool>qa(...)</tool> as needed, then output final answer in <answer>...</answer>."
     )
     return [

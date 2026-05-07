@@ -18,9 +18,32 @@ class HierarchicalReActAgent:
         self.llm = llm_client
         self.max_steps = max_steps
 
+    @staticmethod
+    def _tree_shape_info(env: DocumentEnv) -> str:
+        """Describe valid tree index ranges for the decision model."""
+        root = env.get_node(env.root_id)
+        if root is None:
+            return "Tree shape unavailable."
+        lines = [f"- High-level segments: 1..{len(root.children_ids)}"]
+        for h, l1_id in enumerate(root.children_ids, start=1):
+            l1 = env.get_node(l1_id)
+            if l1 is None:
+                continue
+            lines.append(f"- Segment ({h}) has medium segments: 1..{len(l1.children_ids)}")
+            for m, l2_id in enumerate(l1.children_ids, start=1):
+                l2 = env.get_node(l2_id)
+                if l2 is None:
+                    continue
+                lines.append(f"- Segment ({h},{m}) has low-level leaves: 1..{len(l2.children_ids)}")
+        return "\n".join(lines)
+
     def answer(self, question: str, env: DocumentEnv, max_tokens: int = 256) -> Dict[str, Any]:
         """Run tool-use loop where decision model outputs the final answer."""
-        messages = build_initial_messages(question=question, root_id=env.root_id)
+        messages = build_initial_messages(
+            question=question,
+            root_id=env.root_id,
+            tree_shape_info=self._tree_shape_info(env),
+        )
         trajectory: List[Dict[str, Any]] = []
         used_tools: Set[str] = set()
         final_answer = ""
